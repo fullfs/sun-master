@@ -8,9 +8,127 @@ html
 		include ./includes/head.jade
 
 	body
-		include ./includes/header.jade
-		.content
-			| Бла бла
+		header.header
+			.header__inner
+				.header__left
+					.header__switch
+						span.header__link(href="#") Автомобили
+						a.header__link(href="#") Силовая техника
+				a.header__right(href="#")
+					span.header__phone-icon
+					.header__phone-block
+						.header__phone-text Автосалон:
+						.header__phone-number +7 (383 )230-15-30
+					.header__phone-block
+						.header__phone-text Силовая техника:
+						.header__phone-number +7 (383 )230-15-30
+					.header__phone-block
+						.header__phone-text Сервисный центр:
+						.header__phone-number +7 (383 )230-15-30
 
 
-		include ./includes/footer.jade
+			
+		.menu
+
+
+
+		.slider
+			.slider__info
+				.slider__info-head HONDA PILOT 2016
+				.slider__info-text Новый Honda Pilot предложит богатый функционал российским покупателям
+				a.slider__info-more(href="#") Узнать подробности
+				.slider__info-callback Обратный звонок
+
+
+
+		.main-cars
+			.main-cars__inner
+				ul.main-cars__list
+					li.main-cars__item
+						a.main-cars__link(href="#")
+							.main-cars__name CR-V 2.0
+							.main-cars__price от 1 299 900 руб.
+							img.main-cars__pic(src='../pics/car1.png')
+					li.main-cars__item
+						a.main-cars__link(href="#")
+							.main-cars__name CR-V 2.0
+							.main-cars__price от 1 299 900 руб.
+							img.main-cars__pic(src='../pics/car1.png')
+					li.main-cars__item
+						a.main-cars__link(href="#")
+							.main-cars__name CR-V 2.0
+							.main-cars__price от 1 299 900 руб.
+							img.main-cars__pic(src='../pics/car1.png')
+					li.main-cars__item
+						a.main-cars__link(href="#")
+							.main-cars__name CR-V 2.0
+							.main-cars__price от 1 299 900 руб.
+							img.main-cars__pic(src='../pics/car1.png')
+
+
+
+
+		.grand-menu
+			.grand-menu__inner
+				.grand-menu__list-h
+					.grand-menu__list
+						.grand-menu__item
+							a.grand-menu__link(href="#")
+								p.grand-menu__item-head Honda — видео
+								.grand-menu__item-text
+								.grand-menu__item-pic-cont
+									img.grand-menu__item-pic(src="../pics/grand-menu-pic1.png")
+						.grand-menu__item._light
+							a.grand-menu__link(href="#")
+								p.grand-menu__item-head Где купить Honda
+								p.grand-menu__item-text Выберите ближайшего к вам дилера Honda и запишитесь на бесплатный тест-драйв.
+								.grand-menu__item-pic-cont
+									img.grand-menu__item-pic(src="../pics/grand-menu-pic2.png")
+						.grand-menu__item
+							a.grand-menu__link(href="#")
+								p.grand-menu__item-head Как стать дилером по мотоциклам honda
+								.grand-menu__item-text
+								.grand-menu__item-pic-cont 
+									img.grand-menu__item-pic(src="../pics/grand-menu-pic3.png")
+
+
+
+
+		.events
+			.events__inner
+				.events__head
+					.events__head-text События
+					.events__comment
+						.events__comment-arr._back
+						.events__comment-text @olegzeee нет, это не Shuffle  :)
+						.events__comment-arr._forw
+				.events__cols
+					img.events__pic(src="../pics/events-pic.png")
+					.events__main
+						.events__main-top
+							.events__main-date
+								span.events__main-date-num 8
+								span.events__main-date-mon дек.
+							a.events__main-twit(href="#")
+						p.events__main-head HONDA CR-V — БЕСТСЕЛЛЕР СЕГМЕНТА SUV В 2015 ГОДУ
+						p.events__main-text По версии известного автомобильного портала Focus2Move, Honda CR-V стал самым популярным SUV в мире. За первые девять месяцев текущего года было продано 511 519 экземпляров кроссовера.
+				.events__slider
+					.events__slider-item._prev
+						.events__slider-arr
+							span.events__slider-arr-pic
+						img.events__slider-pic(src="../pics/events-slider-pic1.png")
+						p.events__slider-text Honda CR-V ОБГОНЯЕТ КОНКУРЕНТОВ
+					.events__slider-item._next
+						.events__slider-arr
+							span.events__slider-arr-pic
+						img.events__slider-pic(src="../pics/events-slider-pic2.png")
+						p.events__slider-text Honda PILOT ПОЛУЧИЛ ПЯТЬ ЗВЕЗД БЕЗОПАСНОСТИ
+
+
+
+
+
+
+		footer.footer
+			.footer__inner
+				a.footer__link(href="#") Ссылочка

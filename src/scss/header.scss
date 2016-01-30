@@ -1,1 +1,113 @@
-.header {}
+.header {
+	background: #ffffff;
+	font-family: Arial;
+}
+
+	.header__inner {
+		@include content;
+		height: 82px;
+		background: #7a0014;
+	}
+
+		.header__left {
+			float: left;
+			height: 100%;
+			padding-top: 20px;
+			padding-left: 28px;
+			box-sizing: border-box;
+		}
+
+			.header__switch {
+				background: #ffffff;
+				padding: 4px;
+				height: 35px;
+				display: inline-block;
+
+				@include cf;
+			}
+				
+				.header__link {
+					float: left;
+					vertical-align: top;
+					font-size: 18px;
+					background: #831124;
+					padding: 8px 24px 6px 24px;
+					border-bottom: 1px solid #b2b2b2;
+					color: #ffffff;
+				}
+
+				a.header__link {
+						text-decoration: none;
+						color: #3f3f3f;
+						background: #ffffff;
+						border: none;
+						box-sizing: border-box;
+						padding: 8px 14px 6px 16px;
+						margin: 0 0 0 5px;
+
+						&:hover {
+							position: relative;
+
+							&:after {
+								content: '';
+								position: absolute;
+								height: 100%;
+								width: 100%;
+								top: 0;
+								left: 0;
+								box-sizing: border-box;
+								border: 1px solid #7a0014;
+							}
+						}
+					}
+
+		.header__right {
+			display: block;
+			text-decoration: none;
+			width: 663px;
+			height: 100%;
+			float: right;
+			background: #7a0014;
+			padding-left: 30px;
+			padding-top: 20px;
+			box-sizing: border-box;
+
+			&:after {
+					display: table;
+					content: '';
+					clear: both;
+				}
+
+			&:hover {
+				background: #540612;
+				cursor: pointer;
+			}
+		}
+
+			.header__phone-icon {
+				background: url('../../pics/header-phone-icon.png');
+				width: 27px;
+				height: 29px;
+				display: block;
+				float: left;
+				margin-right: -6px;
+				margin-top: 4px;
+			}
+
+			.header__phone-block {
+				float: left;
+				padding-left: 39px;
+			}
+
+				.header__phone-text {
+					color: #e0b1b8;
+					font-size: 14px;
+					line-height: 13px;
+					padding-bottom: 5px;
+				}
+
+				.header__phone-number {
+					color: #ffffff;
+					font-size: 18px;
+					font-weight: bold;
+				}

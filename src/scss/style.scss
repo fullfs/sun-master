@@ -1,6 +1,30 @@
+@mixin content() {
+	max-width: 1400px;
+	min-width: 1130px;
+	box-sizing: border-box;
+	margin: 0 30px;
+}
+
 @import "mixins";
 @import "base";
 
 @import "header";
-@import "content";
+@import "menu";
+@import "slider";
+@import "main-cars";
+@import "grand-menu";
+@import "events";
 @import "footer";
+
+
+.content {
+	@include cf;
+
+	&:hover {
+
+	}
+
+	&._active {
+
+	}
+}

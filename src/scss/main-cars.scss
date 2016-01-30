@@ -1,0 +1,55 @@
+.main-cars {
+		min-width: 1130px;
+}
+	
+	.main-cars__inner{
+		@include content;
+	}
+	
+		.main-cars__list {
+			display: block;
+			margin-left: 34px;
+			margin-top: 67px;
+			margin-right: 7px;
+			@include cf;
+		}
+			
+			.main-cars__item {
+				display: block;
+				float: left;
+				width: 25%;
+				height: 222px;
+				cursor: pointer;
+				padding-right: 27px;
+				padding-left: 30px;
+				box-sizing: border-box;
+			}
+
+				.main-cars__link {
+					text-decoration: none;
+					cursor: pointer;
+					display: block;
+
+						&:hover {
+						border-bottom: 3px solid #e10025;
+					}
+
+				}
+			
+					.main-cars__name {
+						font-size: 22px;
+						line-height: 20px;
+						color: #333333;
+					}
+				
+					.main-cars__price {
+						font-size: 15px;
+						line-height: 20px;
+						color: #5b5b5b;
+						padding-top: 5px;
+					}
+				
+					.main-cars__pic {
+						margin: 27px 0 38px 28px;
+						max-width: 100%;
+					}

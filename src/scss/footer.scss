@@ -1,3 +1,11 @@
 .footer {
-	
+	background: gray;
 }
+
+	.footer__inner {
+		@include content;
+	}
+
+	.footer__link {
+		@include link-black;
+	}
