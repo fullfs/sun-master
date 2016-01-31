@@ -8,121 +8,222 @@ html
 		include ./includes/head.jade
 
 	body
-		header.header
-			.header__inner
-				.header__left
-					.header__switch
-						span.header__link(href="#") Автомобили
-						a.header__link(href="#") Силовая техника
-				a.header__right(href="#")
-					span.header__phone-icon
-					.header__phone-block
-						.header__phone-text Автосалон:
-						.header__phone-number +7 (383 )230-15-30
-					.header__phone-block
-						.header__phone-text Силовая техника:
-						.header__phone-number +7 (383 )230-15-30
-					.header__phone-block
-						.header__phone-text Сервисный центр:
-						.header__phone-number +7 (383 )230-15-30
+		.wrapper
+			header.header
+				.header__inner
+					.header__holder
+						.header__left
+							.header__switch
+								span.header__link(href="#") Автомобили
+								a.header__link(href="#") Силовая техника
+						a.header__right(href="#")
+							span.header__phone-icon
+							.header__phone-block
+								.header__phone-text Автосалон:
+								.header__phone-number +7 (383 )230-15-30
+							.header__phone-block
+								.header__phone-text Силовая техника:
+								.header__phone-number +7 (383 )230-15-30
+							.header__phone-block
+								.header__phone-text Сервисный центр:
+								.header__phone-number +7 (383 )230-15-30
 
 
-			
-		.menu
+				
+			.menu
+				.menu__inner
+					.menu__holder
+						.menu__logo-honda
+						nav.menu__list-h
+							ul.menu__list 
+								li.menu__item._wider-2
+									a.menu__item-link(href="#") Автосалон
+									ul.menu__sub-list
+										li.menu__sub-item 
+											a.menu__sub-item-link(href="#") Пунктик 1
+										li.menu__sub-item 
+											a.menu__sub-item-link(href="#") Пунктик 2
+								li.menu__item._wider-1
+									a.menu__item-link(href="#") Сервисный центр
+									// А тут например выпадающих пунктов нет
+									// Вдруг надо просто чтобы ссылка на страницу была
+								li.menu__item
+									a.menu__item-link(href="#") Запчасти и аксессуары
+									ul.menu__sub-list
+										li.menu__sub-item 
+											a.menu__sub-item-link(href="#") Пунктик 1
+										li.menu__sub-item 
+											a.menu__sub-item-link(href="#") Пунктик 2
+								li.menu__item._wider-2
+									a.menu__item-link(href="#") О компании
+									ul.menu__sub-list
+										li.menu__sub-item 
+											a.menu__sub-item-link(href="#") Контакты
+										li.menu__sub-item 
+											a.menu__sub-item-link(href="#") Ваш персональный менеджер
+										li.menu__sub-item 
+											a.menu__sub-item-link(href="#") Служба клиентского сервиса
+										li.menu__sub-item 
+											a.menu__sub-item-link(href="#") Вакансии
+										li.menu__sub-item 
+											a.menu__sub-item-link(href="#") Мир Honda
+						.menu__logo-sun 
+
+			.slider
+				.slider__inner
+					.slider__holder
+						button.slider__controls-prev(type="button")
+						button.slider__controls-next(type="button")
+						
+						ul.slider__pagination
+							li.slider__pagination-item
+						
+						// Параметр data-interval задаёт промежуток времени для автослайдинга (в мс)
+						// Если выставить 0 - автослайдинга не будет
+						// можно вынести как параметр в админку
+						.slider__carousel(data-interval="5000")
+							ul.slider__list
+								li.slider__item(
+									data-title="HONDA PILOT 2016"
+									data-description="Новый Honda Pilot <b>предложит</b> богатый функционал российским покупателям"
+								)
+									.slider__item-img(style="background-image: url('images/slide1.jpg')")
+								li.slider__item(
+									data-title="HONDA PILOT 2015"
+									data-description="Старый Honda Pilot <b>не предложит ничего</b>"
+								)
+									.slider__item-img(style="background-image: url('images/slide2.jpg')")
+								li.slider__item
+									.slider__item-img(style="background-image: url('images/slide3.jpg')")
+
+						.slider-form
+							.slider-form__info
+								.slider-form__info-head 
+								.slider-form__info-text 
+								a.slider-form__info-more(href="#") Узнать подробности
+								a.slider-form__info-callback Обратный звонок
 
 
 
-		.slider
-			.slider__info
-				.slider__info-head HONDA PILOT 2016
-				.slider__info-text Новый Honda Pilot предложит богатый функционал российским покупателям
-				a.slider__info-more(href="#") Узнать подробности
-				.slider__info-callback Обратный звонок
-
-
-
-		.main-cars
-			.main-cars__inner
-				ul.main-cars__list
-					li.main-cars__item
-						a.main-cars__link(href="#")
-							.main-cars__name CR-V 2.0
-							.main-cars__price от 1 299 900 руб.
-							img.main-cars__pic(src='../pics/car1.png')
-					li.main-cars__item
-						a.main-cars__link(href="#")
-							.main-cars__name CR-V 2.0
-							.main-cars__price от 1 299 900 руб.
-							img.main-cars__pic(src='../pics/car1.png')
-					li.main-cars__item
-						a.main-cars__link(href="#")
-							.main-cars__name CR-V 2.0
-							.main-cars__price от 1 299 900 руб.
-							img.main-cars__pic(src='../pics/car1.png')
-					li.main-cars__item
-						a.main-cars__link(href="#")
-							.main-cars__name CR-V 2.0
-							.main-cars__price от 1 299 900 руб.
-							img.main-cars__pic(src='../pics/car1.png')
+			.main-cars
+				.main-cars__inner
+					ul.main-cars__list
+						li.main-cars__item
+							a.main-cars__link(href="#")
+								.main-cars__name CR-V 2.0
+								.main-cars__price от 1 299 900 руб.
+								.main-cars__pic-h
+									img.main-cars__pic(src='images/car1.png')
+						li.main-cars__item
+							a.main-cars__link(href="#")
+								.main-cars__name CR-V 2.0
+								.main-cars__price от 1 299 900 руб.
+								.main-cars__pic-h
+									img.main-cars__pic(src='images/car1.png')
+						li.main-cars__item
+							a.main-cars__link(href="#")
+								.main-cars__name CR-V 2.0
+								.main-cars__price от 1 299 900 руб.
+								.main-cars__pic-h
+									img.main-cars__pic(src='images/car1.png')
+						li.main-cars__item
+							a.main-cars__link(href="#")
+								.main-cars__name CR-V 2.0
+								.main-cars__price от 1 299 900 руб.
+								.main-cars__pic-h
+									img.main-cars__pic(src='images/car1.png')
 
 
 
 
-		.grand-menu
-			.grand-menu__inner
-				.grand-menu__list-h
-					.grand-menu__list
-						.grand-menu__item
-							a.grand-menu__link(href="#")
-								p.grand-menu__item-head Honda — видео
-								.grand-menu__item-text
-								.grand-menu__item-pic-cont
-									img.grand-menu__item-pic(src="../pics/grand-menu-pic1.png")
-						.grand-menu__item._light
-							a.grand-menu__link(href="#")
-								p.grand-menu__item-head Где купить Honda
-								p.grand-menu__item-text Выберите ближайшего к вам дилера Honda и запишитесь на бесплатный тест-драйв.
-								.grand-menu__item-pic-cont
-									img.grand-menu__item-pic(src="../pics/grand-menu-pic2.png")
-						.grand-menu__item
-							a.grand-menu__link(href="#")
-								p.grand-menu__item-head Как стать дилером по мотоциклам honda
-								.grand-menu__item-text
-								.grand-menu__item-pic-cont 
-									img.grand-menu__item-pic(src="../pics/grand-menu-pic3.png")
+			.grand-menu
+				.grand-menu__inner
+					.grand-menu__list-h
+						.grand-menu__list
+							.grand-menu__item
+								a.grand-menu__link(href="#")
+									p.grand-menu__item-head Honda — видео
+									.grand-menu__item-text
+									.grand-menu__item-pic-cont
+										img.grand-menu__item-pic(src="images/grand-menu-pic1.png")
+							.grand-menu__item._active
+								a.grand-menu__link(href="#")
+									p.grand-menu__item-head Где купить <br>Honda
+									p.grand-menu__item-text Выберите ближайшего к вам дилера Honda и запишитесь на бесплатный тест-драйв.
+									.grand-menu__item-pic-cont
+										img.grand-menu__item-pic(src="images/grand-menu-pic2.png")
+							.grand-menu__item
+								a.grand-menu__link(href="#")
+									p.grand-menu__item-head Как стать дилером по мотоциклам honda
+									.grand-menu__item-text
+									.grand-menu__item-pic-cont 
+										img.grand-menu__item-pic(src="images/grand-menu-pic3.png")
 
 
 
 
-		.events
-			.events__inner
-				.events__head
-					.events__head-text События
-					.events__comment
-						.events__comment-arr._back
-						.events__comment-text @olegzeee нет, это не Shuffle  :)
-						.events__comment-arr._forw
-				.events__cols
-					img.events__pic(src="../pics/events-pic.png")
-					.events__main
-						.events__main-top
-							.events__main-date
-								span.events__main-date-num 8
-								span.events__main-date-mon дек.
-							a.events__main-twit(href="#")
-						p.events__main-head HONDA CR-V — БЕСТСЕЛЛЕР СЕГМЕНТА SUV В 2015 ГОДУ
-						p.events__main-text По версии известного автомобильного портала Focus2Move, Honda CR-V стал самым популярным SUV в мире. За первые девять месяцев текущего года было продано 511 519 экземпляров кроссовера.
-				.events__slider
-					.events__slider-item._prev
-						.events__slider-arr
-							span.events__slider-arr-pic
-						img.events__slider-pic(src="../pics/events-slider-pic1.png")
-						p.events__slider-text Honda CR-V ОБГОНЯЕТ КОНКУРЕНТОВ
-					.events__slider-item._next
-						.events__slider-arr
-							span.events__slider-arr-pic
-						img.events__slider-pic(src="../pics/events-slider-pic2.png")
-						p.events__slider-text Honda PILOT ПОЛУЧИЛ ПЯТЬ ЗВЕЗД БЕЗОПАСНОСТИ
+			.events
+				.events__inner
+					.events__head
+						.events__head-text События
+						.events__comment
+							.events__comment-arr._back
+							.events__comment-text @olegzeee нет, это не Shuffle  :)
+							.events__comment-arr._forw
+						
+					.events__slider
+						ul.events__slider-list
+							li.events__slider-item(
+								data-title="HONDA CR-V — БЕСТСЕЛЛЕР СЕГМЕНТА SUV В 2015 ГОДУ"
+								data-img="images/events-slider-pic1.png"
+							)
+								img.events__pic(src="images/events-pic.png")
+								.events__main
+									.events__main-top
+										.events__main-date
+											span.events__main-date-num 8
+											span.events__main-date-mon дек.
+										//- a.events__main-twit(href="#")
+									p.events__main-head HONDA CR-V — БЕСТСЕЛЛЕР СЕГМЕНТА SUV В 2015 ГОДУ
+									p.events__main-text По версии известного автомобильного портала Focus2Move, Honda CR-V стал самым популярным SUV в мире. За первые девять месяцев текущего года было продано 511 519 экземпляров кроссовера.
+							li.events__slider-item(
+								data-title="HONDA CR-V — БЕСТСЕЛЛЕР СЕГМЕНТА SUV В 2015 ГОДУ"
+								data-img="images/events-slider-pic1.png"
+							)
+								img.events__pic(src="images/events-pic.png")
+								.events__main
+									.events__main-top
+										.events__main-date
+											span.events__main-date-num 8
+											span.events__main-date-mon дек.
+										//- a.events__main-twit(href="#")
+									p.events__main-head HONDA CR-V — БЕСТСЕЛЛЕР СЕГМЕНТА SUV В 2015 ГОДУ
+									p.events__main-text По версии известного автомобильного портала Focus2Move, Honda CR-V стал самым популярным SUV в мире. За первые девять месяцев текущего года было продано 511 519 экземпляров кроссовера.
+							li.events__slider-item(
+								data-title="HONDA CR-V — БЕСТСЕЛЛЕР СЕГМЕНТА SUV В 2015 ГОДУ"
+								data-img="images/events-slider-pic1.png"
+							)
+								img.events__pic(src="images/events-pic.png")
+								.events__main
+									.events__main-top
+										.events__main-date
+											span.events__main-date-num 8
+											span.events__main-date-mon дек.
+										//- a.events__main-twit(href="#")
+									p.events__main-head HONDA CR-V — БЕСТСЕЛЛЕР СЕГМЕНТА SUV В 2015 ГОДУ
+									p.events__main-text По версии известного автомобильного портала Focus2Move, Honda CR-V стал самым популярным SUV в мире. За первые девять месяцев текущего года было продано 511 519 экземпляров кроссовера.
+					
+					.events__slider-controls
+						.events__slider-controls-item._prev
+							.events__slider-controls-arr
+								span.events__slider-controls-arr-pic
+							img.events__slider-controls-pic(src="")
+							p.events__slider-controls-text
+						.events__slider-controls-item._next
+							.events__slider-controls-arr
+								span.events__slider-controls-arr-pic
+							img.events__slider-controls-pic(src="")
+							p.events__slider-controls-text
 
 
 
@@ -130,5 +231,47 @@ html
 
 
 		footer.footer
-			.footer__inner
-				a.footer__link(href="#") Ссылочка
+			.footer__main-h
+				aside.footer__main
+					section.footer__col._one
+						h6.footer__col-title Автосалон
+						ul.footer__main-list
+							li.footer__main-item
+								a.footer__main-link(href="#") Новые автомобили в наличии
+							li.footer__main-item
+								a.footer__main-link(href="#") Автомобили с пробегом в наличии
+					section.footer__col._two
+						h6.footer__col-title
+							a.footer__col-title-link(href="#") Сервисный центр
+						ul.footer__main-list
+							li.footer__main-item
+								a.footer__main-link(href="#") Новые автомобили в наличии
+							li.footer__main-item
+								a.footer__main-link(href="#") Автомобили с пробегом в наличии
+								
+					section.footer__col._three
+						h6.footer__col-title Запасные части и аксессуары
+						ul.footer__main-list
+							li.footer__main-item
+								a.footer__main-link(href="#") Новые автомобили в наличии
+							li.footer__main-item
+								a.footer__main-link(href="#") Автомобили с пробегом в наличии
+								
+					section.footer__col._four
+						h6.footer__col-title
+							a.footer__col-title-link(href="#") О компании
+						ul.footer__main-list
+							li.footer__main-item
+								a.footer__main-link(href="#") Новые автомобили в наличии
+							li.footer__main-item
+								a.footer__main-link(href="#") Автомобили с пробегом в наличии
+								
+					
+					.footer__social
+						a.footer__social-item._fb(href="#")
+						a.footer__social-item._vk(href="#")
+						a.footer__social-item._yt(href="#")
+								
+			.footer__copyright-h
+				.footer__copyright
+					p Copyright 2006-2016, ООО «СМ-Моторс» г. Новосибирск, ул. Инская

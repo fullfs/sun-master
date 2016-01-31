@@ -1,0 +1,95 @@
+.slider-form {
+	font-family: $ff-regular;
+	color: #ffffff;
+	position: absolute;
+	z-index: 2;
+	top: 32px;
+	left: 3px;
+	display: none;
+}
+
+	.slider-form__info {
+		width: 558px;
+		height: 328px;
+		background: rgba(0, 0, 0, 0.8);
+		border-radius: 5px;
+		position: relative;
+		padding-left: 92px;
+		box-sizing: border-box;
+	}
+
+		.slider-form__info-head {
+			text-transform: uppercase;
+			font-size: 49px;
+			padding-top: 64px;
+			line-height: 49px;
+			font-family: $ff-title-f;
+		}
+
+		.slider-form__info-text {
+			font-size: 16px;
+			padding-top: 30px;
+		}
+
+		.slider-form__info-more {
+			color: #5b5b5b;
+			font-size: 16px;
+			height: 47px;
+			line-height: 47px;
+			display: inline-block;
+			text-decoration: none;
+			padding: 0 32px;
+			background: #ffffff;
+			position: relative;
+			margin-top: 25px;
+			margin-left: 2px;
+			cursor: pointer;
+
+			&:after {
+				content: '';
+				position: absolute;
+				right: 15px;
+				top: 19px;
+				border-left: 5px solid #adadad;
+				border-top: 5px solid #ffffff;
+				border-bottom: 5px solid #ffffff;
+			}
+
+			&:hover {
+				&:after {
+					border-left: 5px solid #5b5b5b;
+				}
+			}
+		}
+
+		.slider-form__info-callback {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			display: block;
+			background: #7a0014;
+			padding: 0 30px 0 51px;
+			color: #ffffff;
+			height: 50px;
+			line-height: 50px;
+
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				width: 16px;
+				height: 31px;
+				top: 8px;
+				left: 20px;
+				background: url('../images/further-icon.png');
+				opacity: 0.7;
+			}
+
+			&:hover {
+				cursor: pointer;
+
+				&:before {
+					opacity: 1;
+				}
+			}
+		}

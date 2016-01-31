@@ -12,13 +12,6 @@
 }
 
 
-@mixin content-indent() {
-	width: 780px;
-	margin: 0 auto;
-	padding-left: 180px;
-}
-
-
 @mixin no-appear {
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -28,10 +21,19 @@
 }
 
 
+@mixin link-menu($color: #333333) {
+	color: $color;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		color: #d20a28;
+	}
+}
 @mixin link-black($color: #fff) {
 	color: $color;
 	text-decoration: none;
-	
+
 	&:hover {
 		color: red;
 	}
@@ -45,4 +47,13 @@
 		vertical-align: middle;
 		height: 100%;
 	}
+}
+
+
+@mixin typo-title-s () {
+	font-family: $ff-title-s;
+	font-size: 26px;
+	line-height: 27px;
+	color: #333333;
+	text-transform: uppercase;
 }

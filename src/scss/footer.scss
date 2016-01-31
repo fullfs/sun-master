@@ -1,11 +1,124 @@
 .footer {
-	background: gray;
+	@include content-h;
+	font-family: $ff-regular;
 }
 
-	.footer__inner {
-		@include content;
+
+	.footer__main-h {
+		background: #202020;
 	}
 
-	.footer__link {
-		@include link-black;
+		.footer__main {
+			@include content;
+			@include cf;
+			padding-top: 50px;
+			padding-bottom: 60px;
+			color: #d5d5d5;
+			position: relative;
+		}
+
+		.footer__col {
+			float: left;
+
+			&._one {
+				width: 21.64%;
+			}
+			&._two {
+				width: 21%;
+			}
+			&._three {
+				width: 26.12%;
+			}
+			&._four {
+				width: 18.95%;
+			}
+		}
+
+		.footer__col-title,
+		.footer__col-title-link {
+			color: #a2a2a2;
+		}
+
+		.footer__col-title {
+			font-family: $ff-title;
+			font-size: 18px;
+			line-height: 22px;
+			text-transform: uppercase;
+			font-weight: bold;
+			padding-bottom: 4px;
+		}
+
+		.footer__col-title-link {
+			text-decoration: none;
+
+			&:hover,
+			&:focus {
+				color: #d90627;
+			}
+		}
+
+			.footer__main-list {
+
+			}
+
+				.footer__main-item {
+					padding: 4px 0;
+				}
+
+					.footer__main-link {
+						text-decoration: none;
+						color: #d5d5d5;
+						font-size: 14px;
+						line-height: 16px;
+
+						&:hover,
+						&:focus {
+							color: #d90627;
+						}
+					}
+
+		.footer__social {
+			position: absolute;
+			@include cf;
+			right: 36px;
+			bottom: 26px;
+		}
+
+			.footer__social-item {
+				width: 26px;
+				height: 26px;
+				float: left;
+
+				& + & {
+					margin-left: 20px;
+				}
+
+				&._fb {
+					background: url('../images/icon-fb.png');
+				}
+
+				&._vk {
+					background: url('../images/icon-vk.png');
+				}
+
+				&._yt {
+					background: url('../images/icon-yt.png');
+				}
+			}
+
+
+	.footer__copyright-h {
+		background: #000000;
 	}
+
+		.footer__copyright {
+			@include content;
+			color: #9b9b9b;
+			height: 50px;
+			@include middler;
+
+			p {
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}

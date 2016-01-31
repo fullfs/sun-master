@@ -1,7 +1,7 @@
 .grand-menu {
 	background: #e1e1e1;
 	margin-top: 171px;
-	font-family: Arial;
+	font-family: $ff-regular;
 }
 
 	.grand-menu__inner {
@@ -15,7 +15,7 @@
 		.grand-menu__list {
 			display: table-row;
 			@include cf;
-		} 
+		}
 
 			.grand-menu__link {
 				display: block;
@@ -28,12 +28,12 @@
 				position: relative;
 				display: table-cell;
 				width: 33.333%;
-				padding: 110px 90px 55px 105px;
+				padding: 110px 5% 55px 7%;
 				box-sizing: border-box;
 
-				&._light {
+				&._active {
 					background: #f3f3f3;
-				} 
+				}
 
 				&:hover {
 					background: #333333;
@@ -41,9 +41,12 @@
 			}
 
 				.grand-menu__item-pic-cont {
-					height: 340px;
-					position: absolute;
-					top: -170px;
+					height: 210px;
+				    position: absolute;
+				    top: -105px;
+					left: 0;
+				    right: 0;
+				    text-align: center;
 					@include middler;
 				}
 
@@ -53,9 +56,7 @@
 					}
 
 				.grand-menu__item-head {
-					color: #333333;
-					font-size: 26px;
-					text-transform: uppercase;
+					@include typo-title-s;
 					display: block;
 
 					.grand-menu__item:hover & {

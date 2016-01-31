@@ -1,27 +1,123 @@
 .menu {
+	font-family: $ff-regular;
+}
+
+.menu__inner {
 	@include content;
+	@include cf;
+	height: 85px;
+}
+
+.menu__holder {
+	padding: 0 210px;
+	height: 100%;
+	position: relative;
 }
 
 	.menu__logo-honda {
+		position: absolute;
+		left: 0;
+		top: 0px;
+		bottom: 0px;
+		height: 100%;
+		width: 190px;
+		@include middler;
+		text-align: center;
 
+		&:before {
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			background: url('../images/logo-honda.png');
+			width: 131px;
+			height: 20px;
+		}
 	}
 
-	.menu__main-list {
-
+	.menu__list-h {
+		height: 100%;
+		width: 100%;
+		display: table;
+		float: left;
 	}
 
-		.menu__item {
-
+		.menu__list {
+			height: 100%;
+			display: table-row;
 		}
 
-			.menu__sublist {
+			.menu__item {
+				height: 100%;
+				display: table-cell;
 
+				&._wider {
+					&-1 {
+						padding: 0 10px;
+					}
+
+					&-2 {
+						padding: 0 20px;
+					}
+
+					&-3 {
+						padding: 0 30px;
+					}
+
+					&-4 {
+						padding: 0 40px;
+					}
+
+					&-5 {
+						padding: 0 50px;
+					}
+				}
 			}
 
-				.menu__subitem {
+				.menu__item-link {
+					text-decoration: none;
+					height: 100%;
+					display: block;
+					text-align: center;
+					@include middler;
+					color: #333;
+					font-size: 18px;
 
+					&:hover {
+						background: #cfcfcf;
+					}
 				}
 
+			.menu__sub-list {
+				padding: 14px 25px;
+				display: none;
+			}
+
+				.menu__sub-item {
+					padding: 7px 0 7px;
+				}
+
+					.menu__sub-item-link {
+						@include link-menu;
+						font-size: 14px;
+						line-height: 18px;
+					}
+
 	.menu__logo-sun {
-		
+		position: absolute;
+		right: 0;
+		top: 0px;
+		bottom: 0px;
+		height: 100%;
+		width: 190px;
+		@include middler;
+		text-align: center;
+
+		&:before {
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			background: url('../images/logo-sun-master.png');
+			width: 141px;
+			height: 37px;
+		}
 	}

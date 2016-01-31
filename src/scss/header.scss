@@ -1,12 +1,16 @@
 .header {
 	background: #ffffff;
-	font-family: Arial;
+	font-family: $ff-regular;
 }
 
 	.header__inner {
 		@include content;
-		height: 82px;
+	}
+
+	.header__holder {
+		@include cf;
 		background: #7a0014;
+		height: 82px;
 	}
 
 		.header__left {
@@ -25,7 +29,7 @@
 
 				@include cf;
 			}
-				
+
 				.header__link {
 					float: left;
 					vertical-align: top;
@@ -85,7 +89,7 @@
 		}
 
 			.header__phone-icon {
-				background: url('../../pics/header-phone-icon.png');
+				background: url('../images/header-phone-icon.png');
 				width: 27px;
 				height: 29px;
 				display: block;

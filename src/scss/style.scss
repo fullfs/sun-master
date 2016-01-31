@@ -1,30 +1,48 @@
+@mixin content-h() {
+	min-width: 1400px;
+}
 @mixin content() {
 	max-width: 1400px;
-	min-width: 1130px;
+	min-width: 1400px;
+	// min-width: 1130px;
 	box-sizing: border-box;
-	margin: 0 30px;
+	padding: 0 30px;
+	margin: 0 auto;
 }
 
+$ff-regular: Arial, sans-serif;
+$ff-title: 'PFSquareSansPro', Arial, sans-serif;
+$ff-title-s: 'MyriadPro', Tahoma, sans-serif;
+$ff-title-f: 'HeliosCond', Tahoma, sans-serif;
+
 @import "mixins";
+@import "fonts";
 @import "base";
+
+.wrapper {
+	@include content-h;
+	padding-bottom: 80px;
+}
 
 @import "header";
 @import "menu";
 @import "slider";
+@import "slider-form";
 @import "main-cars";
 @import "grand-menu";
 @import "events";
 @import "footer";
 
+@import "qtip";
 
-.content {
-	@include cf;
-
-	&:hover {
-
-	}
-
-	&._active {
-
-	}
-}
+// .content {
+// 	@include cf;
+//
+// 	&:hover {
+//
+// 	}
+//
+// 	&._active {
+//
+// 	}
+// }
