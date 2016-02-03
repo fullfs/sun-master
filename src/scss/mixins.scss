@@ -39,6 +39,12 @@
 	}
 }
 
+@mixin text-ellipsis {
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
 
 @mixin middler() {
 	&:after {

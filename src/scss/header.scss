@@ -68,11 +68,10 @@
 		.header__right {
 			display: block;
 			text-decoration: none;
-			width: 663px;
 			height: 100%;
 			float: right;
 			background: #7a0014;
-			padding-left: 30px;
+			padding-right: 30px;
 			padding-top: 20px;
 			box-sizing: border-box;
 
@@ -96,11 +95,19 @@
 				float: left;
 				margin-right: -6px;
 				margin-top: 4px;
+
+				@media (max-width: $bp-s) {
+					display: none;
+				}
 			}
 
 			.header__phone-block {
 				float: left;
 				padding-left: 39px;
+
+				@media (max-width: $bp-s) {
+					padding-left: 20px;
+				}
 			}
 
 				.header__phone-text {

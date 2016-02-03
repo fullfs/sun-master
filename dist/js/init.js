@@ -50,17 +50,24 @@ $(function() {
             .eq(index).addClass('_active');
 
         var $item = $('.slider__item').eq(index);
-        var texts = {
+        var data = {
             title: $item.data('title'),
-            description: $item.data('description')
+            description: $item.data('description'),
+            link: $item.data('link')
         };
 
         var $form = $('.slider-form');
 
-        if (texts.title) {
+        if (data.title) {
+            $('.slider-form__info-head').text(data.title);
+            $('.slider-form__info-text').html(data.description);
+
+            if (data.link) {
+                $('.slider-form__info-more').show().attr('href', data.link);
+            } else {
+                $('.slider-form__info-more').hide();
+            }
             $form.fadeIn(300);
-            $('.slider-form__info-head').text(texts.title);
-            $('.slider-form__info-text').html(texts.description);
         } else {
             $form.fadeOut(300);
         }

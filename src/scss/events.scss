@@ -246,13 +246,7 @@
 					color: #919191;
 					padding: 0 20px;
 					line-height: 60px;
-					.events__slider-controls-item._prev & {
-						float: left;
-					}
-
-					.events__slider-controls-item._next & {
-						float: right;
-					}
+					@include text-ellipsis;
 				}
 
 			.events__slider-controls-item._next {

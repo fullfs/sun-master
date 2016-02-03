@@ -1,9 +1,9 @@
 @mixin content-h() {
-	min-width: 1400px;
+	min-width: 990px;
 }
 @mixin content() {
 	max-width: 1400px;
-	min-width: 1400px;
+	min-width: 990px;
 	// min-width: 1130px;
 	box-sizing: border-box;
 	padding: 0 30px;
@@ -14,6 +14,8 @@ $ff-regular: Arial, sans-serif;
 $ff-title: 'PFSquareSansPro', Arial, sans-serif;
 $ff-title-s: 'MyriadPro', Tahoma, sans-serif;
 $ff-title-f: 'HeliosCond', Tahoma, sans-serif;
+
+$bp-s: 1220px;
 
 @import "mixins";
 @import "fonts";
