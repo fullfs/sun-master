@@ -45,31 +45,33 @@ $(function() {
 
 // Главный слайдер
 $(function() {
+    var $form = $('.slider-form');
+    var enterAnimate = function (index) {
+        var $item = $('.slider__item').eq(index);
+        if ($item.data('title')) {
+            $form.show().animate({
+                left: 0
+            }, 800);
+        }
+    };
     var setPageActive = function(index) {
         $('.slider__pagination-item').removeClass('_active')
             .eq(index).addClass('_active');
 
         var $item = $('.slider__item').eq(index);
         var data = {
-            title: $item.data('title'),
-            description: $item.data('description'),
-            link: $item.data('link')
+            title: $item.data('title') || '',
+            description: $item.data('description') || '',
+            link: $item.data('link') || ''
         };
 
-        var $form = $('.slider-form');
+        $('.slider-form__info-head').text(data.title);
+        $('.slider-form__info-text').html(data.description );
 
-        if (data.title) {
-            $('.slider-form__info-head').text(data.title);
-            $('.slider-form__info-text').html(data.description);
-
-            if (data.link) {
-                $('.slider-form__info-more').show().attr('href', data.link);
-            } else {
-                $('.slider-form__info-more').hide();
-            }
-            $form.fadeIn(300);
+        if (data.link) {
+            $('.slider-form__info-more').show().attr('href', data.link);
         } else {
-            $form.fadeOut(300);
+            $('.slider-form__info-more').hide();
         }
     }
 
@@ -77,10 +79,20 @@ $(function() {
     $mainSlider
         .jcarousel({
             wrap: 'both',
-            animation: 500
+            animation: {
+                duration: 800,
+                easing: 'swing'
+            }
         })
-        .on('jcarousel:scrollend', function(event, carousel, target, animate) {
-            setPageActive(carousel.target().index());
+        .on('jcarousel:animate', function () {
+            $form.fadeOut(500, function () {
+                $(this).css('left', '')
+            });
+        })
+        .on('jcarousel:animateend', function (event, carousel) {
+            var index = carousel.target().index();
+            enterAnimate(index);
+            setPageActive(index);
         });
 
     var interval = $mainSlider.data('interval');
@@ -113,6 +125,7 @@ $(function() {
         });
 
     setPageActive(0);
+    enterAnimate(0);
 
     $(window).resize(function (argument) {
         setTimeout(function function_name(argument) {

@@ -56,7 +56,12 @@
 					}
 
 				.grand-menu__item-head {
-					@include typo-title-s;
+					font-family: $ff-title;
+					font-size: 26px;
+					line-height: 27px;
+					color: #333333;
+					text-transform: uppercase;
+					font-weight: bold;
 					display: block;
 
 					.grand-menu__item:hover & {
